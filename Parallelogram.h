@@ -1,11 +1,10 @@
 #pragma once
-#include <Quadrilateral.h>
+#include "Quadrilateral.h"
 
 class Parallelogram :public Quadrilateral {
 public:
-    Parallelogram() :Parallelogram(20, 30, 20, 30, 30, 40, 30, 40) {}
+    Parallelogram(int side_a_, int side_b_, int side_c_, int side_d_, int angle_a_, int angle_b_, int angle_c_, int angle_d_) :Parallelogram(side_a_, side_b_, side_c_, side_d_, angle_a_, angle_b_, angle_c_, angle_d_, 4, "Параллелограмм:") {}
+    ~Parallelogram();
 protected:
-    Parallelogram(int side_a_, int side_b_, int side_c_, int side_d_, int angle_a_, int angle_b_, int angle_c_, int angle_d_, int quanfig_, std::string name_, const char* name_error_);
-private:
-    Parallelogram(int side_a_, int side_b_, int side_c_, int side_d_, int angle_a_, int angle_b_, int angle_c_, int angle_d_) :Parallelogram(side_a_, side_b_, side_c_, side_d_, angle_a_, angle_b_, angle_c_, angle_d_, 4, "Параллелограмм:", " стороны a,c и b,d попарно не равны и/или углы A,C и B,D попарно не равны") {}
+    Parallelogram(int side_a_, int side_b_, int side_c_, int side_d_, int angle_a_, int angle_b_, int angle_c_, int angle_d_, int quanfig_, std::string name_);
 };
